@@ -2,29 +2,35 @@
 #include <string>
 #include <vector>
 
+
+
+void ecrireConsole(std::string aEcrire)
+{
+    std::cout<<aEcrire;
+    if (!aEcrire.empty())
+    {
+        std::cout<<"\n";
+    }
+}
+
+
 int main(int argc, char** argv)
 {
-
-    
-    std::cout<<"coucou elowan\n";
+    ecrireConsole("coucou elowan");
     std::string loltest;
     std::vector<std::string> tableauLignes;
     do
-    { 
+    {
         std::getline(std::cin, loltest);
         if(loltest != "STOP!")
             tableauLignes.push_back(loltest) ;
         
     } while (loltest != "STOP!");
-    
+
     for(unsigned int i = 0; i<tableauLignes.size();i++)
     {
-        std::cout<<tableauLignes[i];
-        if (!tableauLignes[i].empty())
-        {
-            std::cout<<"\n";
-        }
+        ecrireConsole(tableauLignes[i]);
     }
-    std::cout << "J'ai fini\n";
+    ecrireConsole("J'ai fini");
     return 0;
 }
