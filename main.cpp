@@ -13,6 +13,8 @@ int main(int argc, char** argv)
     { 
         
         std::getline(std::cin, loltest);
+        if(loltest != "STOP!")
+            tableauLignes.push_back(loltest) ;
         // std::cout<<loltest;
         // if (!loltest.empty())
         // {
