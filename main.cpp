@@ -11,7 +11,6 @@ int main(int argc, char** argv)
     std::vector<std::string> tableauLignes;
     do
     { 
-        
         std::getline(std::cin, loltest);
         if(loltest != "STOP!")
             tableauLignes.push_back(loltest) ;
@@ -24,8 +23,8 @@ int main(int argc, char** argv)
         if (!tableauLignes[i].empty())
         {
             std::cout<<"\n";
-        } 
+        }
     }
-
+    std::cout << "J'ai fini\n";
     return 0;
 }
