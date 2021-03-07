@@ -15,16 +15,16 @@ int main(int argc, char** argv)
         std::getline(std::cin, loltest);
         if(loltest != "STOP!")
             tableauLignes.push_back(loltest) ;
-        // std::cout<<loltest;
-        // if (!loltest.empty())
-        // {
-        //     std::cout<<"\n";
-        // }
+        
     } while (loltest != "STOP!");
     
     for(unsigned int i = 0; i<tableauLignes.size();i++)
     {
-        
+        std::cout<<tableauLignes[i];
+        if (!tableauLignes[i].empty())
+        {
+            std::cout<<"\n";
+        } 
     }
 
     return 0;
