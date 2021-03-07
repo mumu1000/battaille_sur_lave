@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 int main(int argc, char** argv)
 {
@@ -7,6 +8,7 @@ int main(int argc, char** argv)
     
     std::cout<<"coucou elowan\n";
     std::string loltest;
+    std::vector<std::string> tableauLignes;
     do
     { 
         
