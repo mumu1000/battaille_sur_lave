@@ -22,6 +22,10 @@ int main(int argc, char** argv)
         // }
     } while (loltest != "STOP!");
     
+    for(unsigned int i = 0; i<tableauLignes.size();i++)
+    {
+        
+    }
 
     return 0;
 }
