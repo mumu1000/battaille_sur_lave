@@ -38,23 +38,6 @@ void ecrireConsole(unsigned int aEcrire)
 
 int main(int argc, char** argv)
 {
-    // ecrireConsole("coucou elowan");
-    // std::string loltest;
-    // std::vector<std::string> tableauLignes;
-    // do
-    // {
-    //     std::getline(std::cin, loltest);
-    //     if(loltest != "STOP!")
-    //         tableauLignes.push_back(loltest) ;
-        
-    // } while (loltest != "STOP!");
-
-    // for(unsigned int i = 0; i<tableauLignes.size();i++)
-    // {
-    //     ecrireConsole(tableauLignes[i]);
-    // }
-    // ecrireConsole("J'ai fini");
-    // return 0;
     int nombreatrouver = nombreAleatoire(1, 100);
     ecrireConsole("bonjour et bienvenu dans le jeu nommé sobrement: devinemonnombre");
     ecrireConsole("entrez un nombre");
@@ -62,12 +45,6 @@ int main(int argc, char** argv)
     do
     {
         nombreactuel = demanderNombre();
-    
-        if (nombreactuel == nombreatrouver)
-        {
-            ecrireConsole("bravos! vous avez gagné!");
-            return 0;
-        }
         if (nombreactuel < nombreatrouver)
         {
             ecrireConsole("le nombre est plus grand.");
@@ -78,5 +55,7 @@ int main(int argc, char** argv)
             ecrireConsole("le nombre est plus petit");
         }
     } while (nombreactuel != nombreatrouver);
-    
+
+    ecrireConsole("bravos! vous avez gagné!");
+    return 0;
 }
