@@ -55,5 +55,28 @@ int main(int argc, char** argv)
     // }
     // ecrireConsole("J'ai fini");
     // return 0;
+    int nombreatrouver = nombreAleatoire(1, 100);
+    ecrireConsole("bonjour et bienvenu dans le jeu nommé sobrement: devinemonnombre");
+    ecrireConsole("entrez un nombre");
+    int nombreactuel;
+    do
+    {
+        nombreactuel = demanderNombre();
+    
+        if (nombreactuel == nombreatrouver)
+        {
+            ecrireConsole("bravos! vous avez gagné!");
+            return 0;
+        }
+        if (nombreactuel < nombreatrouver)
+        {
+            ecrireConsole("le nombre est plus grand.");
+            
+        }
+        if (nombreactuel > nombreatrouver)
+        {
+            ecrireConsole("le nombre est plus petit");
+        }
+    } while (nombreactuel != nombreatrouver);
     
 }
