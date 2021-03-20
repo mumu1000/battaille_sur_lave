@@ -27,8 +27,8 @@ void Personnage::defendre(int degat)
     if(degat>m_armure)
     {
         m_pv-=degat-m_armure;
-        utils::ecrireConsole("Je suis le personnage " + m_nom + " et il ne me reste que " + std::to_string(m_pv) + " points de vie !");
+        utils::ecrireConsole("Je suis le personnage " + m_nom + " et j'ai subi " + std::to_string(degat-m_armure) + " degats. Il ne me reste que " + std::to_string(m_pv) + " points de vie !");
     }else{
-        utils::ecrireConsole("Je suis le personnage " + m_nom + " et j'ai esquivé une attaque !");
+        utils::ecrireConsole("Je suis le personnage " + m_nom + " et j'ai enduré une attaque sans prendre de dégat !");
     }
 }
