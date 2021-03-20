@@ -15,3 +15,12 @@ Personnage::Personnage(std::string nom)
     m_armure=1;
     m_degat=5;
 }
+void Personnage::attaquer(Combattant& cible)
+{
+    cible.defendre(m_degat);
+}
+void Personnage::defendre(int degat)
+{
+    if(degat>m_armure)
+        m_pv-=degat-m_armure;
+}

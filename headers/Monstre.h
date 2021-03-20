@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-class Monstre
+#include "Combattant.h"
+class Monstre : public Combattant
 {
     public:
     Monstre();
@@ -8,4 +9,6 @@ class Monstre
     std::string m_nom;
     int m_degat;
     int m_armure;
+    void attaquer(Combattant& cible);
+    void defendre(int degat);
 };
