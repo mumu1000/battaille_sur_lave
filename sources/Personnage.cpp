@@ -18,7 +18,7 @@ Personnage::Personnage(std::string nom)
 
 void Personnage::attaquer(Combattant& cible)
 {
-    utils::ecrireConsole("Je suis le personnage " + m_nom + " et je tape sur une cible avec une force de "+ std::to_string(m_degat) +" !");
+    utils::ecrireConsole("Je suis " + description() + " et je tape sur " + cible.description() + " avec une force de "+ std::to_string(m_degat) +" !");
     cible.defendre(m_degat);
 }
 
@@ -27,8 +27,13 @@ void Personnage::defendre(int degat)
     if(degat>m_armure)
     {
         m_pv-=degat-m_armure;
-        utils::ecrireConsole("Je suis le personnage " + m_nom + " et j'ai subi " + std::to_string(degat-m_armure) + " degats. Il ne me reste que " + std::to_string(m_pv) + " points de vie !");
+        utils::ecrireConsole("Je suis " + description() + " et j'ai subi " + std::to_string(degat-m_armure) + " degats. Il ne me reste que " + std::to_string(m_pv) + " points de vie !");
     }else{
-        utils::ecrireConsole("Je suis le personnage " + m_nom + " et j'ai enduré une attaque sans prendre de dégat !");
+        utils::ecrireConsole("Je suis " + description() + " et j'ai enduré une attaque sans prendre de dégat !");
     }
+}
+std::string Personnage::description()
+{
+    std::string temp("le personage " + m_nom);
+    return temp;
 }
